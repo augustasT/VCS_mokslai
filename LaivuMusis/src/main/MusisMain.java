@@ -15,21 +15,19 @@ public class MusisMain {
 		return laivuSkaicius;
 	}
 
-	public Laivas padetiHorizontaluLaiva(int ilgis, int x, int y) {
+	public Laivas padetiHorizontaluLaiva(int ilgis, int x, int y, LaivuOrientacija orientacija) {
 		if (x + ilgis <= 10) {
 			laivuSkaicius++;
-			laivasObject = LaivuOrientacija.HORIZONTALUS.getLaivas();
-			laivasObject.NustatykKoordinates(ilgis, x, y);
+			laivasObject = new Laivas(ilgis, x, y, orientacija);
 			laivasObject.nustatykGaloKoordinates();
 		}
 		return laivasObject;
 	}
 
-	public Laivas padetiVertikaluLaiva(int ilgis, int x, int y) {
+	public Laivas padetiVertikaluLaiva(int ilgis, int x, int y,LaivuOrientacija orientacija) {
 		if (y + ilgis <= 10) {
 			laivuSkaicius++;
-			laivasObject = LaivuOrientacija.VERTIKALUS.getLaivas();
-			laivasObject.NustatykKoordinates(ilgis, x, y);
+			laivasObject = new Laivas(ilgis, x, y, orientacija);
 			laivasObject.nustatykGaloKoordinates();
 		}
 		return laivasObject;
